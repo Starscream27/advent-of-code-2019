@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ec24c0ee-0064-4169-9224-0c64f3e2d37f" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="NamedScopeManager">
+    <order>
+      <scope name="Yaml files" />
+      <scope name="Conf files" />
+    </order>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1UQe7HaTNxzMDGIXKVMvO90YAhR" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="CodeAdvent" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="root [file:/Users/mmeylan/nexthink/repos/codeadvent/]" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="CodeAdvent-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="4725879399247" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="2580645516" />
+        <entry key="$PROJECT_DIR$/project/Dependencies.scala" value="1964861620" />
+        <entry key="$PROJECT_DIR$/project/build.properties" value="3724303870" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../bs-dashboard-api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../bs-definition-coordinator" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../bs-us-response-ingest" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../bus-cli" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../bus-dashboard-api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../bus-dev-proxy" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../bus-health-ingest" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../bus-health-streamer" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../bus-integration" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../dev-tools/bus-cli" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../nxassignment" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../scala-course/funsets" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../scala-progfun" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../test-sbt" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec24c0ee-0064-4169-9224-0c64f3e2d37f" name="Default Changelist" comment="" />
+      <created>1575293077826</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575293077826</updated>
+      <workItem from="1575293079729" duration="225000" />
+      <workItem from="1575293407853" duration="41000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
