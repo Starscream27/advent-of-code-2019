@@ -7,13 +7,22 @@ import scala.io.Source
 object December1 {
   def main(args: Array[String]): Unit = {
     val inputFile = "December1.input.txt"
-    val part1 = Source.fromResource(inputFile).getLines.toList
-      .map(_.toLong)
-      .map(December1.computeFuelRequired)
-      .foldLeft(0.toLong)(_ + _)
-
-    println(s"December 1st, part 1: $part1")
+    val transformer = transformInputFile(inputFile)(_)
+    println(s"December 1st, part 1: ${transformer(computeFuelRequired)}")
+    println(s"December 1st, part 2: ${transformer(computeFuelRequiredTakingAddedFuelMassIntoAccount)}")
   }
 
+  def transformInputFile(inputFilePath: String)(computer: Long => Long): Long = Source.fromResource(inputFilePath)
+      .getLines
+      .toList
+      .map(_.toLong)
+      .map(computer)
+      .foldLeft(0.toLong)(_ + _)
+
   def computeFuelRequired(mass: Long): Long = mass / 3 - 2
+  def computeFuelRequiredTakingAddedFuelMassIntoAccount(mass: Long): Long = {
+    val fuel = computeFuelRequired(mass)
+    if (fuel <= 0) 0
+    else fuel + computeFuelRequiredTakingAddedFuelMassIntoAccount(fuel)
+  }
 }
