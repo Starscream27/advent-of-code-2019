@@ -7,7 +7,7 @@ import scala.io.Source
 object December1 {
   def main(args: Array[String]): Unit = {
     val inputFile = "December1.input.txt"
-    val transformer = transformInputFile(inputFile)(_)
+    val transformer: (Long => Long) => Long = transformInputFile(inputFile)
     println(s"December 1st, part 1: ${transformer(computeFuelRequired)}")
     println(s"December 1st, part 2: ${transformer(computeFuelRequiredTakingAddedFuelMassIntoAccount)}")
   }
@@ -17,7 +17,7 @@ object December1 {
       .toList
       .map(_.toLong)
       .map(computer)
-      .foldLeft(0.toLong)(_ + _)
+      .foldLeft(0L)(_ + _)
 
   def computeFuelRequired(mass: Long): Long = mass / 3 - 2
   def computeFuelRequiredTakingAddedFuelMassIntoAccount(mass: Long): Long = {
