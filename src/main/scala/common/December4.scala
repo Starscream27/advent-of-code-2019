@@ -5,41 +5,32 @@ import scala.collection.mutable.ListBuffer
 object December4 {
   def main(args: Array[String]): Unit = {
     val matches = (236491 to 713787)
-      .map(matchesPasswordRules)
-      .count(_ == true)
+      .count(matchesPasswordRules)
 
     println(s"Number of matches found: $matches")
 
     val matchesPart2 = (236491 to 713787)
-      .map(matchesPasswordRules2)
-      .count(_ == true)
+      .count(matchesPasswordRules2)
 
     println(s"Number of refined (part2) matches found: $matchesPart2")
   }
 
+  private def toDigits(password: Int): List[Int] = password.toString.toList.map(_.toInt)
+
   private def twoAdjacentDigitsAreTheSame(password: Int): Boolean = {
-    val digits = password.toString.toArray
-    for ((currentValue, index) <- digits.view.zipWithIndex) {
-      digits.lift(index - 1) match {
-        case Some(prevValue) if currentValue == prevValue => return true
-        case _ => {}
-      }
-    }
-    false
+    toDigits(password)
+      .sliding(2)
+      .exists(window => window.head == window.last)
   }
+
   private def digitsAlwaysIncrease(password: Int): Boolean = {
-    val digits = password.toString.toArray
-    for ((current, index) <- digits.view.zipWithIndex) {
-      digits.lift(index - 1) match {
-        case Some(prev) if prev > current => return false
-        case _ => {}
-      }
-    }
-    true
+    toDigits(password)
+      .sliding(2)
+      .forall(window => window.last >= window.head)
   }
 
   private def atLeastOneGroupOfTwoEqualDigitsAreIsolated(password: Int): Boolean = {
-    def findAllGroupOfTwoEqualDigitsIndexes(digits: Array[Char]): List[(Int, Int)] = {
+    def findAllGroupOfTwoEqualDigitsIndexes(digits: List[Int]): List[(Int, Int)] = {
       val adjacentValuesIndexes = ListBuffer[(Int, Int)]()
       for ((currentValue, index) <- digits.view.zipWithIndex) {
         digits.lift(index - 1) match {
@@ -51,14 +42,14 @@ object December4 {
       }
       adjacentValuesIndexes.toList
     }
-    def isDigitAtIndexEqualThan(digits: Array[Char], index: Int, than: Char) = {
+    def isDigitAtIndexEqualThan(digits: List[Int], index: Int, than: Int) = {
         digits.lift(index) match {
           case Some(value) if value == than => true
           case _ => false
         }
     }
 
-    val digits = password.toString.toArray
+    val digits = toDigits(password)
     val adjacentValues = findAllGroupOfTwoEqualDigitsIndexes(digits)
 
     val numberOfIsolatedAdjacentPairs = adjacentValues.map(indexes => {
